@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Нигадяй!</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <script src="НиггаДяй.js"></script>
+        <script>
+            var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"НиггаДяй","experimentalVK":false,"fileSizes":{"НиггаДяй.pck":276768,"НиггаДяй.wasm":12660493},"gdnativeLibs":[]});
+            function printProgress(current, total) {
+				console.log("Loaded " + current + " of " + total + " bytes");
+			}
+			function print(text) {
+				console.log(text);
+			}
+			function printError(text) {
+				console.warn(text);
+			}
+			engine.startGame({ onProgress: printProgress, onPrint: print, onPrintError: printError });
+        </script>
+    </body>
+</html>
